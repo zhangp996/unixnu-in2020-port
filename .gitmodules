@@ -1,0 +1,6 @@
+[submodule "vendor/UniXNU"]
+	path = vendor/UniXNU
+	url = https://github.com/zhangp996/UniXNU
+[submodule "vendor/UniXNU-sm8250-common"]
+	path = vendor/UniXNU-sm8250-common
+	url = https://github.com/zhangp996/UniXNU-sm8250-common

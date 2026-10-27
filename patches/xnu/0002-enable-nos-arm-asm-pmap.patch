@@ -1,0 +1,7 @@
+--- a/config/MASTER.arm64.bcm2837
++++ b/config/MASTER.arm64.bcm2837
+@@ -96,2 +96,4 @@
+ options   CONFIG_KERNEL_TBI	# <kernel_tbi>
+ options   CONFIG_KERNEL_TAGGING		# <kernel_tagging>
++options		NOS_ARM_ASM
++options		NOS_ARM_PMAP
