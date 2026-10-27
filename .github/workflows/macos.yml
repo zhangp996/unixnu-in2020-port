@@ -1,11 +1,19 @@
 name: macos-16k
 on:
   workflow_dispatch:
+
 jobs:
   build:
-    uses: zhangp996/UniXNU/.github/workflows/macos.yml@main
-    with:
-      device_repository: zhangp996/unixnu-in2020-port
-      device_ref: main
-      defconfig: instantnoodlep_defconfig
-      steps: kernel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch public macOS build
+        env:
+          GH_TOKEN: ${{ secrets.PUBLIC_DISPATCH_TOKEN }}
+        run: |
+          gh workflow run macos.yml \
+            --repo zhangp996/UniXNU \
+            --ref main \
+            -f device_repository=zhangp996/unixnu-in2020-port \
+            -f device_ref=main \
+            -f defconfig=instantnoodlep_defconfig \
+            -f steps=kernel
