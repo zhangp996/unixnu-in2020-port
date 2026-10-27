@@ -1,0 +1,11 @@
+name: macos-16k
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    uses: zhangp996/UniXNU/.github/workflows/macos.yml@main
+    with:
+      device_repository: zhangp996/unixnu-in2020-port
+      device_ref: main
+      defconfig: instantnoodlep_defconfig
+      steps: kernel
